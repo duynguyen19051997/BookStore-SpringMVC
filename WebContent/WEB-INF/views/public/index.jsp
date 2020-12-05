@@ -5,17 +5,17 @@
 <!-- Slide1 -->
 	<section class="slide1">
 		<div class="wrap-slick1">
-			<div class="slick1" style="">
+			<div class="slick1">
 				<c:if test="${not empty listSlide}">
 					<c:forEach items="${listSlide}" var="objSlide">
 						<div class="item-slick1 item1-slick1" style="background-image: url(${pageContext.request.contextPath}/pathUrl/files/${objSlide.slide});">
 							<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
 								<span class="caption1-slide1 m-text1 t-center animated visible-false m-b-15" data-appear="fadeInDown">
-									Book Collection 2018
+									Mobile Store 2020
 								</span>
 		
 								<h2 class="caption2-slide1 xl-text1 t-center animated visible-false m-b-37" data-appear="fadeInUp">
-									New arrivals
+									Cửa hàng bán điện thoại di động
 								</h2>
 		
 								<div class="wrap-btn-slide1 w-size1 animated visible-false" data-appear="zoomIn">
