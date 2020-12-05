@@ -51,6 +51,9 @@ public class AdminCatController {
 			return "redirect:/admin/cat/index/1";
 		}
 		int totalCat = catDao.totalCatParent(cid);
+		if (totalCat == 0) {
+			return "redirect:/admin/";
+		}
 		int numberOfPage = (int) Math.ceil((double) totalCat / Defines.ROW_COUNT);
 		if (currentPage > numberOfPage) {
 			ra.addFlashAttribute("msg", Defines.MSG_ERROR_PAGE);

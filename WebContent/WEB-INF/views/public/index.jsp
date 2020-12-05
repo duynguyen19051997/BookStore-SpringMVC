@@ -5,7 +5,7 @@
 <!-- Slide1 -->
 	<section class="slide1">
 		<div class="wrap-slick1">
-			<div class="slick1">
+			<div class="slick1" style="">
 				<c:if test="${not empty listSlide}">
 					<c:forEach items="${listSlide}" var="objSlide">
 						<div class="item-slick1 item1-slick1" style="background-image: url(${pageContext.request.contextPath}/pathUrl/files/${objSlide.slide});">

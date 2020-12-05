@@ -68,6 +68,9 @@ public class AdminBookController {
 		}
 		if (cid == null) {
 			int totalProduct = bookDao.totalProduct();
+			if (totalProduct == 0) {
+				return "redirect:/admin";
+			}
 			int numberOfPage = (int) Math.ceil((double) totalProduct / Defines.ROW_COUNT);
 			if (currentPage > numberOfPage) {
 				ra.addFlashAttribute("msg", Defines.MSG_ERROR_PAGE);
@@ -82,6 +85,9 @@ public class AdminBookController {
 		} else {
 			Category objCat = catDao.getItemByCid(cid);
 			int totalBookByCid = bookDao.totalBookByCid(cid);
+			if (totalBookByCid == 0) {
+				return "redirect:/admin";
+			}
 			int numberOfPage = (int) Math.ceil((double) totalBookByCid / Defines.ROW_COUNT);
 			if (currentPage > numberOfPage) {
 				ra.addFlashAttribute("msg", Defines.MSG_ERROR_PAGE);

@@ -60,4 +60,8 @@
       <page-encoding>UTF-8</page-encoding>
     </jsp-property-group>
   </jsp-config>
+  <absolute-ordering>
+      <name>SessionFilter</name>
+      <name>AuthenticationFilter</name>
+ </absolute-ordering>
 </web-app>
