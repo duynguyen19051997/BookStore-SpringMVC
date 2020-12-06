@@ -13,7 +13,7 @@
 	                    			<h3 class="page-title">${objCat.cname}</h3>
 	                    		</c:when>
 	                    		<c:otherwise>
-	                    			<h3 class="page-title">Products Management</h3>
+	                    			<h3 class="page-title">Quản lý sản phẩm</h3>
 	                    		</c:otherwise>
 	                    	</c:choose>
 	                    	<div class="ml-auto">
@@ -24,8 +24,8 @@
 	                        <div class="ml-auto text-right">
 	                            <nav aria-label="breadcrumb">
 	                                <ol class="breadcrumb">
-	                                    <li class="breadcrumb-item"><a href="${pageContext.request.contextPath}/admin">Home</a></li>
-	                                    <li class="breadcrumb-item active" aria-current="page">Products Management</li>
+	                                    <li class="breadcrumb-item"><a href="${pageContext.request.contextPath}/admin">Trang chủ</a></li>
+	                                    <li class="breadcrumb-item active" aria-current="page">Quản lý sản phẩm</li>
 	                                </ol>
 	                            </nav>
 	                        </div>
@@ -44,12 +44,12 @@
                             <div style="width: 998px" id="d2" class="card-body">
 								<div class="col-md-12">
 									<div id="left" class="col-md-4">
-										<a href="${pageContext.request.contextPath}/admin/book/add" title="Add">
+										<a href="${pageContext.request.contextPath}/admin/product/add" title="Add">
 											<button class="btn btn-outline-success">Add</button>
 										</a>
 									</div>
 									<div id="right" class="col-md-4">
-										<form id="search" action="${pageContext.request.contextPath}/admin/book/search" method="get">
+										<form id="search" action="${pageContext.request.contextPath}/admin/product/search" method="get">
 											<div class="input-group form">
 												<input  type="text" name="search" value="" class="form-control" placeholder="Search...">
 												<span class="input-group-btn">
@@ -67,7 +67,7 @@
 								        			},
 								        			messages:{
 								        				search:{
-								        					required:'Not empty, please!'
+								        					required:'Vui lòng nhập để tìm!'
 								        				}
 								        			},
 								        		});
@@ -81,21 +81,21 @@
                                         <thead>
                                             <tr>
                                                 <th class="d1">Bid</th>
-                                                <th class="d1">Product Name</th>
-                                                <th class="d1">Price (VND)</th>
-                                                <th class="d1">Images</th>
-                                                <th class="d1">Category</th>
+                                                <th class="d1">Tên sản phẩm</th>
+                                                <th class="d1">Giá (VNĐ)</th>
+                                                <th class="d1">Hình ảnh</th>
+                                                <th class="d1">Danh mục sản phẩm</th>
                                                 <th class="d1">By</th>
-                                                <th class="d1">Detail</th>
-                                                <th class="d1">Status</th>
-                                                <th width="160px" class="d1">Function</th>
+                                                <th class="d1">Chi tiết</th>
+                                                <th class="d1">Trạng thái</th>
+                                                <th width="160px" class="d1">Chức năng</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                         	<c:if test="${not empty listProduct}">
                                         		<c:forEach items="${listProduct}" var="objPro">
-                                        			<c:set var="urlDel" value="${pageContext.request.contextPath}/admin/book/delete/${objPro.bid}/${currentPage}"></c:set>
-           											<c:set var="urlEdit" value="${pageContext.request.contextPath}/admin/book/edit/${objPro.bid}/${currentPage}"></c:set>	
+                                        			<c:set var="urlDel" value="${pageContext.request.contextPath}/admin/product/delete/${objPro.bid}/${currentPage}"></c:set>
+           											<c:set var="urlEdit" value="${pageContext.request.contextPath}/admin/product/edit/${objPro.bid}/${currentPage}"></c:set>	
 		                                            <tr>
 		                                                <td class="d1">${objPro.bid}</td>
 		                                                <td class="d1">${objPro.bname}</td>
@@ -105,10 +105,10 @@
 		                                                		<img width="50px" height="50px" alt="${objPro.bname}" src="${pageContext.request.contextPath}/pathUrl/files/${objPro.picture}">
 		                                                	</c:if>
 		                                                </td>
-		                                                <td class="d1"><a href="${pageContext.request.contextPath}/admin/book/${objPro.cid}/index/1" title="${objPro.cname}">${objPro.cname}</a></td>
+		                                                <td class="d1"><a href="${pageContext.request.contextPath}/admin/product/${objPro.cid}/index/1" title="${objPro.cname}">${objPro.cname}</a></td>
 		                                                <td class="d1">${objPro.create_by}</td>
 		                                                <td class="d1">
-		                                                	<a href="${pageContext.request.contextPath}/admin/book/detail/${objPro.bid}">Here</a>
+		                                                	<a href="${pageContext.request.contextPath}/admin/product/detail/${objPro.bid}">Here</a>
 		                                                </td>
 		                                                <td class="d1" id="activeimg">
 		                                                	<c:choose>
@@ -179,30 +179,30 @@
 										  <ul class="pagination">
 								        	<c:choose>
 								        		<c:when test="${currentPage - 1 >= 1}">
-								        			<li class='<c:if test="${currentPage == 1}">page-item disabled</c:if>'><a class="page-link" href="${pageContext.request.contextPath}/admin/book/${id}index/${currentPage -1}" aria-label="Previous"><span aria-hidden="true">Previous</span></a></li>
+								        			<li class='<c:if test="${currentPage == 1}">page-item disabled</c:if>'><a class="page-link" href="${pageContext.request.contextPath}/admin/product/${id}index/${currentPage -1}" aria-label="Previous"><span aria-hidden="true">Previous</span></a></li>
 								        		</c:when>
 								        		<c:otherwise>
-								        			<li class='<c:if test="${currentPage == 1}">page-item disabled</c:if>'><a class="page-link" href="${pageContext.request.contextPath}/admin/book/${id}index/1" aria-label="Previous"><span aria-hidden="true">Previous</span></a></li>
+								        			<li class='<c:if test="${currentPage == 1}">page-item disabled</c:if>'><a class="page-link" href="${pageContext.request.contextPath}/admin/product/${id}index/1" aria-label="Previous"><span aria-hidden="true">Previous</span></a></li>
 								        		</c:otherwise>
 								        	</c:choose>
 								             <c:forEach begin="1" end="${numberOfPage}" var="i">
 								             	<c:if test="${i <= currentPage + 2 && i >= currentPage - 2}">
 								             		<c:choose>
 									            		<c:when test="${i eq currentPage}">
-									            			<li class="page-item active"><a class="page-link" href="${pageContext.request.contextPath}/admin/book/${id}index/${i}">${i}</a></li>
+									            			<li class="page-item active"><a class="page-link" href="${pageContext.request.contextPath}/admin/product/${id}index/${i}">${i}</a></li>
 									            		</c:when>
 									            		<c:otherwise>
-									            			<li class="page-item"><a class="page-link" href="${pageContext.request.contextPath}/admin/book/${id}index/${i}">${i}</a></li>
+									            			<li class="page-item"><a class="page-link" href="${pageContext.request.contextPath}/admin/product/${id}index/${i}">${i}</a></li>
 									            		</c:otherwise>
 									            	</c:choose>
 								             	</c:if>
 								            </c:forEach>
 								            <c:choose>
 								        		<c:when test="${currentPage + 1 <= numberOfPage}">
-								        			<li class='<c:if test="${currentPage == numberOfPage}">page-item disabled</c:if>'><a class="page-link" href="${pageContext.request.contextPath}/admin/book/${id}index/${currentPage + 1}" aria-label="Next"><span aria-hidden="true">Next</span></a></li>
+								        			<li class='<c:if test="${currentPage == numberOfPage}">page-item disabled</c:if>'><a class="page-link" href="${pageContext.request.contextPath}/admin/product/${id}index/${currentPage + 1}" aria-label="Next"><span aria-hidden="true">Next</span></a></li>
 								        		</c:when>
 								        		<c:otherwise>
-								        			<li class='<c:if test="${currentPage == numberOfPage}">page-item disabled</c:if>'><a class="page-link" href="${pageContext.request.contextPath}/admin/book/index/${numberOfPage}" aria-label="Next"><span aria-hidden="true">Next</span></a></li>
+								        			<li class='<c:if test="${currentPage == numberOfPage}">page-item disabled</c:if>'><a class="page-link" href="${pageContext.request.contextPath}/admin/product/index/${numberOfPage}" aria-label="Next"><span aria-hidden="true">Next</span></a></li>
 								        		</c:otherwise>
 								        	</c:choose>
 										  </ul>
@@ -220,7 +220,7 @@
 				        	var src = $(this).attr('src');
 				        	var id = $(this).attr('id');
 				            $.ajax({
-								url: '${pageContext.request.contextPath}/book/active',
+								url: '${pageContext.request.contextPath}/product/active',
 								type: 'POST',
 								cache: false,
 								data: {
