@@ -59,30 +59,27 @@
 							</div>
 						</div>
 					</div>
+					<!--  -->
 				</div>
 	
 				<div class="w-size14 p-t-30 respon5">
-					<h4 class="product-detail-name m-text17 p-b-13">
-						${objPro.bname}
+					<h4 style="font-weight: bolder;" class="product-detail-name m-text17 p-b-13">
+						${objPro.bname} 
+						<c:if test="${objPro.discount > 0}"><span style="color: red;" class="badge badge-light"><i class="fa fa-gift"></i> ${Integer.valueOf(objPro.discount * 100)} %</span></c:if>
 					</h4>
 					
-					<h5 class="product-detail-name m-text15">
-						Views: ${objPro.count_view}
+					<h5 class="product-detail-name m-text25" style="color: red; font-weight: bolder;"> 
+						Giá: ${Integer.valueOf(objPro.price)} VNĐ
 					</h5>
 					
-					<h5 class="product-detail-name m-text15">
-						Price: ${Integer.valueOf(objPro.price)} VNĐ
-					</h5>
+					<h6 class="product-detail-name m-text15">
+						Lượt xem: ${objPro.count_view}
+					</h6>
 					
-					<c:if test="${objPro.discount > 0}">
-						<h4 class="s-text8 p-t-10" style="color: red;">
-							Sale: ${Integer.valueOf(objPro.discount * 100)} %
-						</h4>
-					</c:if>
 					
 					<!--  -->
 					<div class="p-t-33 p-b-60">
-						<span class="m-text17">Quantity: </span>
+						<span class="m-text17">Số lượng: </span>
 						<div class="flex-r-m flex-w p-t-10">
 							<div class="w-size16 flex-m flex-w">
 								<div class="flex-w bo5 of-hidden m-r-22 m-t-10 m-b-10">
@@ -125,12 +122,118 @@
 							}						
 						</script>
 					</div>
-	
-	
 					<!--  -->
 					<div class="wrap-dropdown-content bo6 p-t-15 p-b-14 active-dropdown-content">
-						<h5 class="js-toggle-dropdown-content flex-sb-m cs-pointer m-text19 color0-hov trans-0-4">
-							Detail
+						<h5 class="js-toggle-dropdown-content flex-sb-m cs-pointer m-text25 color0-hov trans-0-4">
+							<span class="badge badge-pill badge-primary">Thông tin khi mua máy</span>
+							<i class="down-mark fs-12 color1 fa fa-minus dis-none" aria-hidden="true"></i>
+							<i class="up-mark fs-12 color1 fa fa-plus" aria-hidden="true"></i>
+						</h5>
+	
+						<div class="dropdown-content dis-none p-t-15 p-b-23">
+							<p class="s-text8" style="margin-left: 30px; font-weight: bold;">
+								<i style="font-size: 20px; margin-right: 10px; color: blue;" class="fa fa-bullhorn"></i>Máy bán ra bao gồm Sạc, Cáp, Tai nghe, Que lấy sim
+							</p>
+							<p class="s-text8" style="margin-left: 30px; font-weight: bold;">
+								<i style="font-size: 20px; margin-right: 10px; color: blue;" class="fa fa-bullhorn"></i>Tặng kèm dán màn hình, Ốp lưng
+							</p>
+							<p class="s-text8" style="margin-left: 30px; font-weight: bold;">
+								<i style="font-size: 20px; margin-right: 10px; color: blue;" class="fa fa-bullhorn"></i>Có sẵn gói bảo hành và bao test 1 đổi 1 (tùy gói BH)
+							</p>
+						</div>
+					</div>
+	
+					<div class="wrap-dropdown-content bo7 p-t-15 p-b-14">
+						<h5 class="js-toggle-dropdown-content flex-sb-m cs-pointer m-text25 color0-hov trans-0-4">
+							<span class="badge badge-pill badge-success">Thông tin thêm</span>
+							<i class="down-mark fs-12 color1 fa fa-minus dis-none" aria-hidden="true"></i>
+							<i class="up-mark fs-12 color1 fa fa-plus" aria-hidden="true"></i>
+						</h5>
+	
+						<div class="dropdown-content dis-none p-t-15 p-b-23">
+							<p class="s-text8" style="margin-left: 30px; font-weight: bold;">
+								<i style="font-size: 20px; margin-right: 10px; color: green;" class="fa fa-check-circle"></i>Giảm ngay 200.000đ cho HSSV (chi tiết)
+							</p>
+							<p class="s-text8" style="margin-left: 30px; font-weight: bold;">
+								<i style="font-size: 20px; margin-right: 10px; color: green;" class="fa fa-check-circle"></i>Tặng combo bảo vệ máy (Dán màn hình, ốp lưng)
+							</p>
+							<p class="s-text8" style="margin-left: 30px; font-weight: bold;">
+								<i style="font-size: 20px; margin-right: 10px; color: green;" class="fa fa-check-circle"></i>Tặng bộ phụ kiện sạc, cáp, tai nghe
+							</p>
+							<p class="s-text8" style="margin-left: 30px; font-weight: bold;">
+								<i style="font-size: 20px; margin-right: 10px; color: green;" class="fa fa-check-circle"></i>Hỗ trợ trả góp nhanh chóng, thủ tục đơn giản
+							</p>
+							<p class="s-text8" style="margin-left: 30px; font-weight: bold;">
+								<i style="font-size: 20px; margin-right: 10px; color: green;" class="fa fa-check-circle"></i>Hỗ trợ thu cũ đổi mới, không lo bù tiền (chi tiết)
+							</p>
+							<p class="s-text8" style="margin-left: 30px; font-weight: bold;">
+								<i style="font-size: 20px; margin-right: 10px; color: green;" class="fa fa-check-circle"></i>Bảo hành phần cứng lên đến 12 tháng cả rơi vỡ
+							</p>
+							<p class="s-text8" style="margin-left: 30px; font-weight: bold;">
+								<i style="font-size: 20px; margin-right: 10px; color: green;" class="fa fa-check-circle"></i>Chế độ 1 đổi 1 lên đến 12 tháng (chi tiết)
+							</p>
+							<p class="s-text8" style="margin-left: 30px; font-weight: bold;">
+								<i style="font-size: 20px; margin-right: 10px; color: green;" class="fa fa-check-circle"></i>Bảo hành phầm mềm miễn phí trọn đời máy
+							</p>
+							<p class="s-text8" style="margin-left: 30px; font-weight: bold;">
+								<i style="font-size: 20px; margin-right: 10px; color: green;" class="fa fa-check-circle"></i>Hỗ trợ mua phụ kiện giá ưu đãi
+							</p>
+							<p class="s-text8" style="margin-left: 30px; font-weight: bold;">
+								<i style="font-size: 20px; margin-right: 10px; color: green;" class="fa fa-check-circle"></i>Hotline: <span style="color: red;">1900 63 65 94</span>
+							</p>
+						</div>
+					</div>
+					
+					<div class="wrap-dropdown-content bo7 p-t-15 p-b-14">
+						<h5 class="js-toggle-dropdown-content flex-sb-m cs-pointer m-text25 color0-hov trans-0-4">
+							<span class="badge badge-pill badge-danger">Ưu đãi trả góp</span>
+							<i class="down-mark fs-12 color1 fa fa-minus dis-none" aria-hidden="true"></i>
+							<i class="up-mark fs-12 color1 fa fa-plus" aria-hidden="true"></i>
+						</h5>
+	
+						<div class="dropdown-content dis-none p-t-15 p-b-23">
+							<p class="s-text8" style="margin-left: 30px;">
+								 <i style="font-size: 20px; margin-right: 10px; color: red;" class="fa fa-exclamation-circle"></i>Trả góp 0% lãi suất bằng thẻ TD hơn 20 ngân hàng
+							</p>
+							<p class="s-text8" style="margin-left: 30px;">
+								 <i style="font-size: 20px; margin-right: 10px; color: red;" class="fa fa-exclamation-circle"></i>Trả góp lãi suất thấp chỉ cần CMND + BLX (hoặc Sổ hộ khẩu) bản gốc
+							</p>
+							<p class="s-text8" style="margin-left: 30px;">
+								 <i style="font-size: 20px; margin-right: 10px; color: red;" class="fa fa-exclamation-circle"></i>Yêu cầu trên 18 tuổi, trả trước 20%.
+							</p>
+							<p class="s-text8" style="margin-left: 30px;">
+								<i style="font-size: 20px; margin-right: 10px; color: red;" class="fa fa-exclamation-circle"></i>Xét duyệt hồ sơ nhanh chóng trong 5-10 phút, không giữ giấy tờ.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</c:if>
+	</div>
+
+	<div class="container bgwhite p-t-35 p-b-80">
+		<c:if test="${not empty objPro}">
+			<div class="flex-w flex-sb">
+				<div class="w-size14 p-t-30 respon5" style="width: 100%;">
+					<!--  -->
+					<div class="wrap-dropdown-content bo6 p-t-15 p-b-14 active-dropdown-content">
+						<h5 style="text-transform: uppercase;" class="js-toggle-dropdown-content flex-sb-m cs-pointer m-text19 color0-hov trans-0-4">
+							Đánh giá chi tiết
+							<i class="down-mark fs-12 color1 fa fa-minus dis-none" aria-hidden="true"></i>
+							<i class="up-mark fs-12 color1 fa fa-plus" aria-hidden="true"></i>
+						</h5>
+	
+						<div class="dropdown-content dis-none p-t-15 p-b-23" style="text-align: center;">
+							<p class="s-text8">
+								${objPro.decription}
+							</p>
+						</div>
+						
+					</div>
+	
+					<div class="wrap-dropdown-content bo7 p-t-15 p-b-14">
+						<h5 style="text-transform: uppercase;" class="js-toggle-dropdown-content flex-sb-m cs-pointer m-text19 color0-hov trans-0-4">
+							Thông số kĩ thuật
 							<i class="down-mark fs-12 color1 fa fa-minus dis-none" aria-hidden="true"></i>
 							<i class="up-mark fs-12 color1 fa fa-plus" aria-hidden="true"></i>
 						</h5>
@@ -143,21 +246,7 @@
 					</div>
 	
 					<div class="wrap-dropdown-content bo7 p-t-15 p-b-14">
-						<h5 class="js-toggle-dropdown-content flex-sb-m cs-pointer m-text19 color0-hov trans-0-4">
-							More Information
-							<i class="down-mark fs-12 color1 fa fa-minus dis-none" aria-hidden="true"></i>
-							<i class="up-mark fs-12 color1 fa fa-plus" aria-hidden="true"></i>
-						</h5>
-	
-						<div class="dropdown-content dis-none p-t-15 p-b-23">
-							<p class="s-text8">
-								${objPro.decription}
-							</p>
-						</div>
-					</div>
-	
-					<div class="wrap-dropdown-content bo7 p-t-15 p-b-14">
-						<h5 id="total-cmt" class="js-toggle-dropdown-content flex-sb-m cs-pointer m-text19 color0-hov trans-0-4">
+						<h5 style="text-transform: uppercase;" id="total-cmt" class="js-toggle-dropdown-content flex-sb-m cs-pointer m-text19 color0-hov trans-0-4">
 							Reviews (${totalCmt})
 							<i class="down-mark fs-12 color1 fa fa-minus dis-none" aria-hidden="true"></i>
 							<i class="up-mark fs-12 color1 fa fa-plus" aria-hidden="true"></i>
@@ -177,7 +266,7 @@
 									<c:otherwise>
 										<div class="size15 m-b-20">
 											<p class="sizefull s-text7 p-l-22 p-r-22">
-												There are no comments for this product yet
+												Chưa có đánh giá về sản phẩm này !
 											</p>
 										</div>
 									</c:otherwise>
