@@ -5,7 +5,7 @@
 <!-- breadcrumb -->
 	<div class="bread-crumb bgwhite flex-w p-l-52 p-r-15 p-t-30 p-l-15-sm">
 		<a href="${pageContext.request.contextPath}" class="s-text16">
-			Home
+			Trang chủ
 			<i class="fa fa-angle-right m-l-8 m-r-9" aria-hidden="true"></i>
 		</a>
 		
@@ -96,7 +96,7 @@
 	
 								<div class="btn-addcart-product-detail size9 trans-0-4 m-t-10 m-b-10">
 									<a onclick="return addCart1(${objPro.bid});" href="javascript:void(0);" class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4">
-										Add to Cart
+										<i style="font-size: 25px;" class="fa fa-shopping-cart"></i>
 									</a>
 								</div>
 							</div>
@@ -362,7 +362,7 @@
 		<div class="container">
 			<div class="sec-title p-b-60">
 				<h3 class="m-text5 t-center">
-					Related products
+					Sản phẩm liên quan
 				</h3>
 			</div>
 			
@@ -394,19 +394,19 @@
 		
 											<div class="block2-btn-addcart w-size1 trans-0-4">
 												<a onclick="return addCart(${objPro.bid});" href="javascript:void(0);" class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-													Add to Cart
+													<i style="font-size: 25px;" class="fa fa-shopping-cart"></i>
 												</a>
 											</div>
 										</div>
 									</div>
 		
-									<div class="block2-txt p-t-20">
-										<a href="${urlDetail}" style="height: 90px" class="block2-name dis-block s-text3 p-b-5">
+									<div class="block2-txt p-t-20" style="text-align: center;">
+										<a href="${urlDetail}" style="font-weight: bolder;" class="block2-name dis-block s-text3 p-b-5">
 											${objPro.bname}
 										</a>
 		
 										<span class="block2-price m-text6 p-r-5">
-											Price: ${Integer.valueOf(objPro.price)} VND
+											Giá: ${Integer.valueOf(objPro.price)} VND
 										</span>
 									</div>
 								</div>

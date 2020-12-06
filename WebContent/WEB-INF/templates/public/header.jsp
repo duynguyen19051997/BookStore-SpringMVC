@@ -12,7 +12,7 @@
 <div class="container-menu-header">
 	<div class="topbar">
 
-		<span class="topbar-child1"> Welcome to BookStore </span>
+		<span class="topbar-child1"> Chào mừng đến với MobileStore </span>
 		<%
 			if (session.getAttribute("listCart") == null) {
 				List<Item> listCart = new ArrayList<Item>();
@@ -28,14 +28,14 @@
 	<div class="wrap_header">
 		<!-- Logo -->
 		<a href="${pageContext.request.contextPath}/" class="logo"> <img
-			src="${pageContext.request.contextPath}/publicUrl/images/icons/bookstorelogo.png"
+			src="${pageContext.request.contextPath}/publicUrl/images/icons/logo.png"
 			alt="IMG-LOGO">
 		</a>
 
 		<div class="search-product pos-relative bo4 of-hidden">
 			<form action="${pageContext.request.contextPath}/search.html" method="GET" id="formsearch">
 				<input class="s-text7 size6 p-l-23 p-r-50" type="text"
-				name="searchproduct" placeholder="Search Products..." value='<c:if test="${not empty search}">${search}</c:if>'>
+				name="searchproduct" placeholder="Bạn muốn tìm gì..." value='<c:if test="${not empty search}">${search}</c:if>'>
 
 				<button type="submit" class="flex-c-m size5 ab-r-m color2 color0-hov trans-0-4">
 					<i class="fs-12 fa fa-search" aria-hidden="true"></i>
@@ -65,7 +65,7 @@
 			<nav class="menu">
 			
 				<ul class="main_menu">
-					<li><a id="product" href="${pageContext.request.contextPath}/product/1.html">Products</a>
+					<li><a id="product" href="${pageContext.request.contextPath}/product/1.html">Sản Phẩm</a>
 						<ul class="sub_menu">
 							<c:if test="${not empty listParent}">
 								<c:forEach items="${listParent}" var="objCat">
@@ -85,19 +85,19 @@
 							</c:if>
 						</ul>
 					</li>
-					<li><a id="cart" href="${pageContext.request.contextPath}/cart.html">Cart</a></li>
+					<li><a id="cart" href="${pageContext.request.contextPath}/cart.html">Giỏ hàng</a></li>
 					<li><a id="like" href="${pageContext.request.contextPath}/favorite.html">
-							Favorite Products
+							Sản phẩm yêu thích
 							<span id="total-items-favorite" class="header-icons-noti">${ActionCart.totalItems(listFavorite)}</span>
 						</a>
 					</li>
 					<c:choose>
 						<c:when test="${empty user}">
-							<li><a id="login" href="${pageContext.request.contextPath}/login.html">Sign in</a></li>
-							<li><a id="registed" href="${pageContext.request.contextPath}/registed.html">Register</a></li>
+							<li><a id="login" href="${pageContext.request.contextPath}/login.html">Đăng nhập</a></li>
+							<li><a id="registed" href="${pageContext.request.contextPath}/registed.html">Đăng ký</a></li>
 						</c:when>
 						<c:otherwise>
-							<li><a href="${pageContext.request.contextPath}/logout.html">Log out</a></li>
+							<li><a href="${pageContext.request.contextPath}/logout.html">Đăng xuất</a></li>
 						</c:otherwise>
 					</c:choose>
 				</ul>
@@ -178,20 +178,20 @@
 								result +=		'<span class="header-cart-item-info">';
 								result +=			item['quantity'] + ' x ' + item['product']['price'] + ' VNĐ';
 								result +=		'</span>';
-								result +=		'<a onclick="return deleteCart('+ item['product']['bid'] +');" href="javascript:void(0);" class="header-cart-item-info">Delete</a>';
+								result +=		'<a onclick="return deleteCart('+ item['product']['bid'] +');" href="javascript:void(0);" class="header-cart-item-info"><i class="fa fa-trash"></i></a>';
 								result += 	'</div>';
 								result += '</li>';
 							});
 							result += '</ul>';
 							result += '<div class="header-cart-total">';
-							result += 	'Total: ' + total + ' VND';
+							result += 	'Thành tiền: ' + total + ' VND';
 							result += '</div>';
 							result += '<div class="header-cart-buttons">';
 							result += 	'<div class="header-cart-wrapbtn">';
-							result += 		'<a href="${pageContext.request.contextPath}/cart.html" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">Cart</a>';
+							result += 		'<a href="${pageContext.request.contextPath}/cart.html" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">Giỏ hàng</a>';
 							result += 	'</div>';
 							result += 	'<div class="header-cart-wrapbtn">';
-							result += 		'<a href="${pageContext.request.contextPath}/check.html" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">Pay</a>';
+							result += 		'<a href="${pageContext.request.contextPath}/check.html" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">Thanh toán</a>';
 							result += 	'</div>';
 							result += '</div>';
 							$(function(){
@@ -277,7 +277,7 @@
 								cart += 		'</div>';
 								cart +=		'</td>';
 								cart += 	'<td class="column-6">' + item['quantity']*item['product']['price']*(1-item['product']['discount']) + '</td>';
-								cart += 	'<td class="column-7"><a onclick="return deleteCart(' + item['product']['bid'] + ');" href="javascript:void(0);">Delete</a></td>';
+								cart += 	'<td class="column-7"><a onclick="return deleteCart(' + item['product']['bid'] + ');" href="javascript:void(0);"><i class="fa fa-trash"></i></a></td>';
 								cart += '</tr>';
 							});
 							result += '</ul>';
@@ -286,13 +286,13 @@
 							result += '</div>';
 							result += '<div class="header-cart-buttons">';
 							result += 	'<div class="header-cart-wrapbtn">';
-							result += 		'<a href="${pageContext.request.contextPath}/cart.html" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">Cart</a>';
+							result += 		'<a href="${pageContext.request.contextPath}/cart.html" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">Giỏ hàng</a>';
 							result += 	'</div>';
 							result += 	'<div class="header-cart-wrapbtn">';
-							result += 		'<a href="${pageContext.request.contextPath}/check.html" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">Pay</a>';
+							result += 		'<a href="${pageContext.request.contextPath}/check.html" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">Thanh toán</a>';
 							result += 	'</div>';
 							result += '</div>';
-							cart += 		'<tr class="table-row"><td class="column-2" colspan="5" style="text-align: center;"><span style="font-weight: bolder;">Total: ' + total + ' VND </span></td></tr>';
+							cart += 		'<tr class="table-row"><td class="column-2" colspan="5" style="text-align: center;"><span style="font-weight: bolder;">Thành tiền: ' + total + ' VND </span></td></tr>';
 							cart += '	</table>';
 							cart += '</div>';
 							$(function(){

@@ -7,7 +7,7 @@
 	             <div class="page-breadcrumb">
 	                <div class="row">
 	                    <div class="col-12 d-flex no-block align-items-center">
-	                    	<h3 class="page-title">Bills Management</h3>
+	                    	<h3 class="page-title">Quản lý hóa đơn</h3>
 	                    	<div class="ml-auto">
 		                		<c:if test="${not empty msg}">
 						       	 	<h3 class="text-success">${msg}</h3>
@@ -16,8 +16,8 @@
 	                        <div class="ml-auto text-right">
 	                            <nav aria-label="breadcrumb">
 	                                <ol class="breadcrumb">
-	                                    <li class="breadcrumb-item"><a href="${pageContext.request.contextPath}/admin">Home</a></li>
-	                                    <li class="breadcrumb-item active" aria-current="page">Bills Management</li>
+	                                    <li class="breadcrumb-item"><a href="${pageContext.request.contextPath}/admin">Trang chủ</a></li>
+	                                    <li class="breadcrumb-item active" aria-current="page">Quản lý hóa đơn</li>
 	                                </ol>
 	                            </nav>
 	                        </div>
@@ -56,7 +56,7 @@
 								        			},
 								        			messages:{
 								        				search:{
-								        					required:'Not empty, please!'
+								        					required:'Nhập nội dung cần tìm!'
 								        				}
 								        			},
 								        		});
@@ -70,11 +70,11 @@
                                         <thead>
                                             <tr>
                                                 <th class="d1">bill_id</th>
-                                                <th class="d1">Buyer</th>
+                                                <th class="d1">Người mua</th>
                                                 <th class="d1">Status</th>
-                                                <th class="d1">Purchase date</th>
-                                                <th class="d1">Detail</th>
-                                                <th class="d1">Total (VND)</th>
+                                                <th class="d1">Ngày mua</th>
+                                                <th class="d1">Chi tiết</th>
+                                                <th class="d1">Tổng tiền (VND)</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -101,7 +101,7 @@
 		                                                </td>
 		                                                <td class="d1">${objBill.date_create}</td>
 		                                                <td class="d1">
-		                                                	<a href="${urlDetail}" title="Detail">Detail</a>
+		                                                	<a href="${urlDetail}" title="Chi tiết">Chi tiết</a>
 		                                                </td>
 		                                                <td class="d1">${Integer.valueOf(objBill.total)}</td>
 		                                            </tr>

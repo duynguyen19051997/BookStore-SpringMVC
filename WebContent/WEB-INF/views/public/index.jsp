@@ -32,11 +32,11 @@
 					<div class="item-slick1 item1-slick1" style="background-image: url(${pageContext.request.contextPath}/publicUrl/images/books_flowers_1.jpg);">
 						<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
 							<span class="caption1-slide1 m-text1 t-center animated visible-false m-b-15" data-appear="fadeInDown">
-								Book Collection 2018
+								Mobile Store 2020
 							</span>
 	
 							<h2 class="caption2-slide1 xl-text1 t-center animated visible-false m-b-37" data-appear="fadeInUp">
-								New arrivals
+								Cửa hàng bán điện thoại di động
 							</h2>
 	
 							<div class="wrap-btn-slide1 w-size1 animated visible-false" data-appear="zoomIn">
@@ -70,11 +70,11 @@
 					<div class="item-slick1 item3-slick1" style="background-image: url(${pageContext.request.contextPath}/publicUrl/images/books_flowers_3.jpg);">
 						<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
 							<span class="caption1-slide1 m-text1 t-center animated visible-false m-b-15" data-appear="rotateInDownLeft">
-								Book Collection 2018
+								MobileStore 2020
 							</span>
 	
 							<h2 class="caption2-slide1 xl-text1 t-center animated visible-false m-b-37" data-appear="rotateInUpRight">
-								New arrivals
+								Cửa hàng bán điện thoại di động
 							</h2>
 	
 							<div class="wrap-btn-slide1 w-size1 animated visible-false" data-appear="rotateIn">
@@ -115,7 +115,7 @@
 								<div class="w-size2 p-t-25">
 									<!-- Button -->
 									<a href="${pageContext.request.contextPath}/login.html" class="flex-c-m size2 bg4 bo-rad-23 hov1 m-text3 trans-0-4">
-										Sign in
+										Đăng nhập
 									</a>
 								</div>
 							</div>
@@ -132,7 +132,7 @@
 		<div class="container">
 			<div class="sec-title p-b-60">
 				<h3 class="m-text5 t-center">
-						More people check out products
+						Sản phẩm được tìm kiếm nhiều nhất
 				</h3>
 			</div>
 
@@ -165,19 +165,19 @@
 											<div class="block2-btn-addcart w-size1 trans-0-4">
 												<!-- Button -->
 												<a onclick="return addCart(${objPro.bid});" href="javascript:void(0);" class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-													Add to Cart
+													<i style="font-size: 25px;" class="fa fa-shopping-cart"></i>
 												</a>
 											</div>
 										</div>
 									</div>
 		
-									<div class="block2-txt p-t-20">
-										<a href="${urlDetail}" style="height: 90px" class="block2-name dis-block s-text3 p-b-5">
+									<div class="block2-txt p-t-20" style="text-align: center;">
+										<a href="${urlDetail}" style="font-weight: bolder;" class="block2-name dis-block s-text3 p-b-5">
 											${objPro.bname}
 										</a>
 		
 										<span class="block2-price m-text6 p-r-5">
-											Price: ${Integer.valueOf(objPro.price)} VND
+											Giá: ${Integer.valueOf(objPro.price)} VND
 										</span>
 									</div>
 								</div>
@@ -194,7 +194,7 @@
 		<div class="container">
 			<div class="sec-title p-b-60">
 				<h3 class="m-text5 t-center">
-					New products posted
+					Sản phẩm mới
 				</h3>
 			</div>
 
@@ -227,19 +227,19 @@
 											<div class="block2-btn-addcart w-size1 trans-0-4">
 												<!-- Button -->
 												<a onclick="return addCart(${objPro.bid});" href="javascript:void(0);" class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-													Add to Cart
+													<i style="font-size: 25px;" class="fa fa-shopping-cart"></i>
 												</a>
 											</div>
 										</div>
 									</div>
 		
-									<div class="block2-txt p-t-20">
-										<a href="${urlDetail}" style="height: 90px" class="block2-name dis-block s-text3 p-b-5">
+									<div class="block2-txt p-t-20" style="text-align: center;">
+										<a href="${urlDetail}" style="font-weight: bolder;" class="block2-name dis-block s-text3 p-b-5">
 											${objPro.bname}
 										</a>
 		
 										<span class="block2-price m-text6 p-r-5">
-											Price: ${Integer.valueOf(objPro.price)} VND
+											Giá: ${Integer.valueOf(objPro.price)} VND
 										</span>
 									</div>
 								</div>

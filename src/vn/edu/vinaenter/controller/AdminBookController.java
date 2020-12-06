@@ -31,7 +31,7 @@ import vn.edu.vinaenter.model.dao.UserDao;
 import vn.edu.vinaenter.util.FileUtil;
 
 @Controller
-@RequestMapping("admin/book")
+@RequestMapping("admin/product")
 public class AdminBookController {
 
 	@Autowired

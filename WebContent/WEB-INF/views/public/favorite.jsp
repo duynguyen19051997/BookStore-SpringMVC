@@ -7,10 +7,10 @@
 <!-- Title Page -->
 	<section class="bg-title-page p-t-50 p-b-40 flex-col-c-m" style="background-image: url(${pageContext.request.contextPath}/publicUrl/images/books_flowers_1.jpg);">
 		<h2 class="l-text2 t-center">
-			Favorite Product
+			Sản phẩm yêu thích
 		</h2>
 		<p class="m-text13 t-center">
-			New Arrivals Book Collection 2018
+			MobileStore 2020
 		</p>
 	</section>
 
@@ -24,7 +24,7 @@
 					<div class="leftbar p-r-20 p-r-0-sm">
 						<!--  -->
 						<h4 class="m-text14 p-b-7">
-							Category
+							Danh mục sản phẩm
 						</h4>
 
 						<ul class="p-b-54">
@@ -86,13 +86,13 @@
 											<div class="block2-overlay trans-0-4">
 												<div class="block2-btn-addcart w-size1 trans-0-4">
 													<a onclick="return addCart(${objPro.product.bid});" href="javascript:void(0);" class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-														Add to Cart
+														<i style="font-size: 25px;" class="fa fa-shopping-cart"></i>
 													</a>
 												</div>
 											</div>
 										</div>
-										<div class="block2-txt p-t-20">
-											<a style="height: 90px;" href="${urlDetail}" class="block2-name dis-block s-text3 p-b-5">
+										<div class="block2-txt p-t-20" style="text-align: center;">
+											<a style="font-weight: bolder;" href="${urlDetail}" class="block2-name dis-block s-text3 p-b-5">
 												${objPro.product.bname}
 											</a>
 											
@@ -101,7 +101,7 @@
 											</span>
 											
 											<a onclick="return deleteFavorite(${objPro.product.bid});" href="javascript:void(0);" class="block2-price m-text6 p-r-5">
-												Delete
+												<i class="fa fa-trash"></i>
 											</a>
 		
 										</div>
@@ -174,14 +174,14 @@
 							result +=			'<img width="272px" height="272px" src="${pageContext.request.contextPath}/pathUrl/files/' + item['product']['picture'] + '" alt="IMG-PRODUCT">';
 							result +=			'<div class="block2-overlay trans-0-4">';
 							result += 				'<div class="block2-btn-addcart w-size1 trans-0-4">';
-							result += 					'<a onclick="return addCart(' + item['product']['bid'] + ');" href="javascript:void(0);" class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">Add to Cart</a>';
+							result += 					'<a onclick="return addCart(' + item['product']['bid'] + ');" href="javascript:void(0);" class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4"><i style="font-size: 25px;" class="fa fa-shopping-cart"></i></a>';
 							result += 				'</div>';
 							result += 			'</div>';
 							result +=		'</div>';
-							result += 		'<div class="block2-txt p-t-20">';
-							result += 			'<a style="height: 90px;" href="#" class="block2-name dis-block s-text3 p-b-5">' + item['product']['bname'] + '</a>';
+							result += 		'<div class="block2-txt p-t-20" style="text-align: center;">';
+							result += 			'<a style="font-weight: bolder;" href="#" class="block2-name dis-block s-text3 p-b-5">' + item['product']['bname'] + '</a>';
 							result += 			'<span class="block2-price m-text6 p-r-5">' + item['product']['price'] + ' VNĐ</span>';
-							result += 			'<a onclick="return deleteFavorite(' + item['product']['bid'] + ');" href="javascript:void(0);" class="block2-price m-text6 p-r-5">Xóa</a>';
+							result += 			'<a onclick="return deleteFavorite(' + item['product']['bid'] + ');" href="javascript:void(0);" class="block2-price m-text6 p-r-5"><i class="fa fa-trash"></i></a>';
 							result +=		'</div>';
 							result +=	'</div>';
 							result += '</div>';

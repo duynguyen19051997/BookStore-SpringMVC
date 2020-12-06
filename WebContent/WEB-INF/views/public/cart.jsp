@@ -6,7 +6,7 @@
 <!-- Title Page -->
 	<section class="bg-title-page p-t-50 p-b-40 flex-col-c-m" style="background-image: url(${pageContext.request.contextPath}/publicUrl/images/books_flowers_1.jpg);">
 		<h2 class="l-text2 t-center">
-			Cart
+			Giỏ hàng
 		</h2>
 	</section>
 
@@ -18,13 +18,13 @@
 				<div class="wrap-table-shopping-cart bgwhite">
 					<table class="table-shopping-cart">
 						<tr class="table-head">
-							<th class="column-1">Image</th>
-							<th class="column-2">Product</th>
-							<th class="column-3">Price</th>
-							<th class="column-4">Discount</th>
-							<th class="column-5">Quantity</th>
-							<th class="column-6">Money</th>
-							<th class="column-7">Function</th>
+							<th class="column-1">Hình ảnh</th>
+							<th class="column-2">Sản phẩm</th>
+							<th class="column-3">Giá</th>
+							<th class="column-4">Giảm giá</th>
+							<th class="column-5">Số lượng</th>
+							<th class="column-6">Thành tiền</th>
+							<th class="column-7">Chức năng</th>
 						</tr>
 						<c:choose>
 							<c:when test="${not empty listCart}">
@@ -59,16 +59,16 @@
 											</div>
 										</td>
 										<td class="column-6">${Integer.valueOf(objCart.product.price * (1 - objCart.product.discount) * objCart.quantity)} VND</td>
-										<td class="column-7"><a onclick="return deleteCart(${objCart.product.bid});" href="javascript:void(0);">Delete</a></td>
+										<td style="text-align: center;" class="column-7"><a onclick="return deleteCart(${objCart.product.bid});" href="javascript:void(0);"><i style="font-size: 25px;" class="fa fa-trash"></i></a></td>
 									</tr>
 								</c:forEach>
 								<tr class="table-row">
-									<td class="column-2" colspan="7" style="text-align: center;"><span style="font-weight: bolder;">Total of money: ${Integer.valueOf(ActionCart.total(listCart))} VND </span></td>
+									<td class="column-2" colspan="7" style="text-align: center;"><span style="font-weight: bolder;">Tổng tiền: ${Integer.valueOf(ActionCart.total(listCart))} VND </span></td>
 								</tr>
 							</c:when>
 							<c:otherwise>
 								<tr>
-									<td class="column-2" colspan="5" style="text-align: center;">Empty shopping cart
+									<td class="column-2" colspan="5" style="text-align: center;">Giỏ hàng trống
 									</td>
 								</tr>
 							</c:otherwise>
@@ -81,7 +81,7 @@
 				<div class="size10 trans-0-4 m-t-10 m-b-10">
 					<!-- Button -->
 					<button onclick="return showCart1();" class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4">
-						Update cart
+						Cập nhật giỏ hàng
 					</button>
 				</div>
 				
@@ -93,13 +93,13 @@
 					<div class="size12 trans-0-4 m-t-10 m-b-10 m-r-10">
 						<!-- Button -->
 						<button class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4">
-							Discount
+							Khuyến mãi
 						</button>
 					</div>
 				</div>
 				
 				<div class="size10 trans-0-4 m-t-10 m-b-10">
-					<a href="${pageContext.request.contextPath}/check.html" title="Pay"><button class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4">Pay</button></a>
+					<a href="${pageContext.request.contextPath}/check.html" title="Pay"><button class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4">Thanh toán</button></a>
 				</div>
 				
 			</div>
@@ -138,13 +138,13 @@
 							cart += '<div class="wrap-table-shopping-cart bgwhite">';
 							cart += 	'<table class="table-shopping-cart">';
 							cart += 		'<tr class="table-head">';
-							cart += 			'<th class="column-1">Image</th>';
-							cart += 			'<th class="column-2">Product</th>';
-							cart += 			'<th class="column-3">Price</th>';
-							cart += 			'<th class="column-4">Discount</th>';
-							cart += 			'<th class="column-5">Quantity</th>';
-							cart += 			'<th class="column-6">Money</th>';
-							cart += 			'<th class="column-7">Function</th>';
+							cart += 			'<th class="column-1">Hình ảnh</th>';
+							cart += 			'<th class="column-2">Sản phẩm</th>';
+							cart += 			'<th class="column-3">Giá</th>';
+							cart += 			'<th class="column-4">Giảm giá</th>';
+							cart += 			'<th class="column-5">Số lượng</th>';
+							cart += 			'<th class="column-6">Thành tiền</th>';
+							cart += 			'<th class="column-7">Chức năng</th>';
 							cart += 		'</tr>';
 							$.each(data, function(key, item){
 								totalNumber += item['quantity'];
@@ -168,10 +168,10 @@
 								cart += 		'</div>';
 								cart +=		'</td>';
 								cart += 	'<td class="column-6">' + item['quantity']*item['product']['price']*(1-item['product']['discount']) + '</td>';
-								cart += 	'<td class="column-7"><a onclick="return deleteCart(' + item['product']['bid'] + ');" href="javascript:void(0);">Delete</a></td>';
+								cart += 	'<td style="text-align: center;" class="column-7"><a onclick="return deleteCart(' + item['product']['bid'] + ');" href="javascript:void(0);"><i style="font-size: 25px;" class="fa fa-trash"></i></a></td>';
 								cart += '</tr>';
 							});
-							cart += 		'<tr class="table-row"><td class="column-2" colspan="5" style="text-align: center;"><span style="font-weight: bolder;">Total of money: ' + total + ' VND </span></td></tr>';
+							cart += 		'<tr class="table-row"><td class="column-2" colspan="5" style="text-align: center;"><span style="font-weight: bolder;">Tổng tiền: ' + total + ' VND </span></td></tr>';
 							cart += '	</table>';
 							cart += '</div>';
 							$(function(){

@@ -10,8 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="${pageContext.request.contextPath}/adminUrl/assets/images/logobs.png">
-    <title>BookStore Admin</title>
+    <title>MobileStore Admin</title>
     <!-- Custom CSS -->
     <link href="${pageContext.request.contextPath}/adminUrl/assets/libs/flot/css/float-chart.css" rel="stylesheet">
     <!-- Custom CSS -->

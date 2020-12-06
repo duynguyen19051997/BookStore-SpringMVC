@@ -6,7 +6,7 @@
 <!-- Title Page -->
 	<section class="bg-title-page p-t-50 p-b-40 flex-col-c-m" style="background-image: url(${pageContext.request.contextPath}/publicUrl/images/books_flowers_1.jpg);">
 		<h2 class="l-text2 t-center">
-			Check Out
+			Thanh toán
 		</h2>
 	</section>
 
@@ -18,12 +18,12 @@
 				<div id="check" class="wrap-table-shopping-cart bgwhite">
 					<table class="table-shopping-cart">
 						<tr class="table-head">
-							<th class="column-1">Image</th>
-							<th class="column-2">Product</th>
-							<th class="column-3">Price</th>
-							<th class="column-4">Discount</th>
-							<th class="column-5">Quantity</th>
-							<th class="column-6">Money</th>
+							<th class="column-1">Hình ảnh</th>
+							<th class="column-2">Sản phẩm</th>
+							<th class="column-3">Giá</th>
+							<th class="column-4">Giảm giá</th>
+							<th class="column-5">Số lượng</th>
+							<th class="column-6">Thành tiền</th>
 						</tr>
 						<c:choose>
 							<c:when test="${not empty listCart}">
@@ -46,12 +46,12 @@
 									</tr>
 								</c:forEach>
 								<tr class="table-row">
-									<td class="column-2" colspan="6" style="text-align: center;"><span style="font-weight: bolder;">Total of money: ${Integer.valueOf(total)} VND </span></td>
+									<td class="column-2" colspan="6" style="text-align: center;"><span style="font-weight: bolder;">Tổng tiền: ${Integer.valueOf(total)} VND </span></td>
 								</tr>
 							</c:when>
 							<c:otherwise>
 								<tr>
-									<td class="column-2" colspan="6" style="text-align: center;"><a href="${pageContext.request.contextPath}/product/1.html">Select Product</a></td>
+									<td class="column-2" colspan="6" style="text-align: center;"><a href="${pageContext.request.contextPath}/product/1.html">Chọn sản phẩm</a></td>
 								</tr>
 							</c:otherwise>
 						</c:choose>
@@ -63,13 +63,13 @@
 			<div class="bo9 w-size18 p-l-40 p-r-40 p-t-30 p-b-38 m-t-30 m-r-0 m-l-auto p-lr-15-sm">
 				
 				<h5 class="m-text20 p-b-24">
-					Bill
+					Hóa đơn
 				</h5>
 
 				<!--  -->
 				<div class="flex-w flex-sb-m p-t-26 p-b-30">
 					<span class="m-text22 w-size19 w-full-sm">
-						Total of Money:
+						Thành tiền:
 					</span>
 
 					<span class="m-text21 w-size20 w-full-sm">
@@ -117,7 +117,7 @@
 									$(function(){
 										$('#total-items').append(data);
 									});
-									window.alert('successful transaction by ' + details.payer.name.given_name);
+									window.alert('Bạn đã giao dịch thành công!');
 					                //window.location.reload(true);
 			                	},
 				                error: function (){

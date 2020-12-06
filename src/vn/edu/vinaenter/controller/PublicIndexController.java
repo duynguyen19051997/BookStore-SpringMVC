@@ -124,6 +124,9 @@ public class PublicIndexController {
 			currentPage = 1;
 		}
 		int totalPro = bookDao.totalProductBySearchPublic(search);
+		if (totalPro == 0) {
+			return "redirect:/";
+		}
 		int numberOfPage = (int) Math.ceil((double) totalPro / Defines.ROW_COUNT_PUBLIC);
 		if (currentPage > numberOfPage) {
 			currentPage = numberOfPage;

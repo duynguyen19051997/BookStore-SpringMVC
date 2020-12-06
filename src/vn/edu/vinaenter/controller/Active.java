@@ -38,7 +38,7 @@ public class Active {
 		return src;
 	}
 	
-	@PostMapping("/book/active")
+	@PostMapping("/product/active")
 	public @ResponseBody String activeBook(@RequestParam("aId") Integer id, @RequestParam("aSrc") String src){
 		String status = src.substring(src.lastIndexOf("/") + 1, src.lastIndexOf("."));
 		String oldSrc = src.substring(0, src.lastIndexOf("/") + 1);

@@ -16,13 +16,10 @@
 			</c:when>
 			<c:otherwise>
 				<h2 class="l-text2 t-center">
-					Book
+					MobileStore 2020
 				</h2>
 			</c:otherwise>
 		</c:choose>
-		<p class="m-text13 t-center">
-			New Arrivals Book Collection 2018
-		</p>
 	</section>
 
 
@@ -35,7 +32,7 @@
 					<div class="leftbar p-r-20 p-r-0-sm">
 						<!--  -->
 						<h4 class="m-text14 p-b-7">
-							Categories
+							Danh mục sản phẩm
 						</h4>
 						<ul class="p-b-54">
 							<li class="p-t-4">
@@ -136,18 +133,18 @@
 		
 												<div class="block2-btn-addcart w-size1 trans-0-4">
 													<a onclick="return addCart(${objPro.bid});" href="javascript:void(0);" class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-														Add to Cart
+														<i style="font-size: 25px;" class="fa fa-shopping-cart"></i>
 													</a>
 												</div>
 											</div>
 										</div>
-										<div class="block2-txt p-t-20">
-											<a style="height: 90px;" href="${urlDetail}" class="block2-name dis-block s-text3 p-b-5">
+										<div class="block2-txt p-t-20" style="text-align: center;">
+											<a href="${urlDetail}" style="font-weight: bolder;" class="block2-name dis-block s-text3 p-b-5">
 												${objPro.bname}
 											</a>
-		
+			
 											<span class="block2-price m-text6 p-r-5">
-												${Integer.valueOf(objPro.price)} VND
+												Giá: ${Integer.valueOf(objPro.price)} VND
 											</span>
 										</div>
 									</div>

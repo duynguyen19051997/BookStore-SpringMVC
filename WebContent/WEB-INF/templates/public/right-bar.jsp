@@ -13,7 +13,7 @@
 		</div>
 
 		<!-- Categories -->
-		<h4 class="m-text23 p-t-56 p-b-34">Categories</h4>
+		<h4 class="m-text23 p-t-56 p-b-34">Danh mục</h4>
 
 		<ul>
 			<li class="p-t-6 p-b-8 bo6"><a href="#"

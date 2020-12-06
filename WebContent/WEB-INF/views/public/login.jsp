@@ -4,7 +4,7 @@
 <!-- Title Page -->
 	<section class="bg-title-page p-t-50 p-b-40 flex-col-c-m" style="background-image: url(${pageContext.request.contextPath}/publicUrl/images/books_flowers_1.jpg);">
 		<h2 class="l-text2 t-center">
-			Sign in
+			Đăng nhập
 		</h2>
 	</section>
 
@@ -21,7 +21,7 @@
 					 </c:if>
 					<form id="registedform" class="leave-comment" action="${pageContext.request.contextPath}/login.html" method="POST">
 						<h4 class="m-text26 p-b-36 p-t-15">
-							Sign in
+							Đăng nhập
 						</h4>
 						
 						<div class="bo4 size15 m-b-20">
@@ -35,7 +35,7 @@
 						<div class="w-size25">
 							<!-- Button -->
 							<button class="flex-c-m size2 bg1 bo-rad-23 hov1 m-text3 trans-0-4" type="submit">
-								Sign in
+								Đăng nhập
 							</button>
 						</div>
 					</form>
@@ -54,10 +54,10 @@
 			        			},
 			        			messages:{
 			        				username: {
-										required: 'Enter username, please!'
+										required: 'Vui lòng nhập Username!'
 									},
 									password: {
-										required: 'Enter password, please!'
+										required: 'Vui lòng nhập password!'
 									},
 			        			},
 			        		});

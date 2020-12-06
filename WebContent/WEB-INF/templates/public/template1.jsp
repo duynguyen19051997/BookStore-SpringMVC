@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>BookStore</title>
+	<title>MobileStore</title>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <script src="https://www.paypal.com/sdk/js?client-id=AVeCtpUR9tgivVMOEKEk1KpyXu7gY5byI2p5ebLwaDcpQxXtgmCGGlXFrRx0oAX34r7WmFAwQXyNeQtf"></script>

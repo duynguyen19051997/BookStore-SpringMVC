@@ -12,8 +12,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="${pageContext.request.contextPath}/adminUrl/assets/images/logobs.png">
-    <title>BookStore Admin</title>
+    <title>MobileStore Admin</title>
     <!-- Custom CSS -->
 	<link href="${pageContext.request.contextPath}/adminUrl/dist/css/style.css" rel="stylesheet">
 	<link href="${pageContext.request.contextPath}/adminUrl/dist/css/mystyle.css" rel="stylesheet">
@@ -46,7 +45,7 @@
             <div id="login" class="auth-box bg-dark">
                 <div id="loginform">
                     <div class="text-center p-t-20 p-b-20">
-                        <span class="db"><img id="imgage" src="${pageContext.request.contextPath}/adminUrl/assets/images/logobookstore.png" alt="logo" /></span>
+                        <span class="db"><img id="imgage"  width="300px" src="${pageContext.request.contextPath}/adminUrl/assets/images/logo.png" alt="logo" /></span>
                     </div>
                     <div class="text-center p-t-20 p-b-20">
 			     		<c:if test="${'loginErr' eq param['error']}">

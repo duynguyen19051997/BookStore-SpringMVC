@@ -4,11 +4,11 @@
 <%@include file="/WEB-INF/templates/taglib.jsp"%>
 <div class="flex-w p-b-90">
 	<div class="w-size6 p-t-30 p-l-15 p-r-15 respon3">
-		<img alt="BookStore" src="${pageContext.request.contextPath}/publicUrl/images/icons/bookstorelogo.png">
+		<img alt="MobileStore" width="300px" src="${pageContext.request.contextPath}/publicUrl/images/icons/logo.png">
 	</div>
 
 	<div class="w-size7 p-t-30 p-l-15 p-r-15 respon4">
-		<h4 class="s-text12 p-b-30">Categories</h4>
+		<h4 class="s-text12 p-b-30">Danh mục chính</h4>
 		<c:if test="${not empty listParent}">
 			<ul>
 				<c:forEach items="${listParent}" var="objCat">

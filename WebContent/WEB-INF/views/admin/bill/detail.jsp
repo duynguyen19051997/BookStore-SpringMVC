@@ -7,7 +7,7 @@
 	             <div class="page-breadcrumb">
 	                <div class="row">
 	                    <div class="col-12 d-flex no-block align-items-center">
-	                    	<h3 class="page-title">${objBill.username}'s Bills (${objBill.date_create})</h3>
+	                    	<h3 class="page-title">Hóa đơn của ${objBill.username} (${objBill.date_create})</h3>
 	                    	<div class="ml-auto">
 		                		<c:if test="${not empty msg}">
 						       	 	<h3 class="text-success">${msg}</h3>
@@ -16,8 +16,8 @@
 	                        <div class="ml-auto text-right">
 	                            <nav aria-label="breadcrumb">
 	                                <ol class="breadcrumb">
-	                                    <li class="breadcrumb-item"><a href="${pageContext.request.contextPath}/admin">Home</a></li>
-	                                    <li class="breadcrumb-item active" aria-current="page">Bills Management</li>
+	                                    <li class="breadcrumb-item"><a href="${pageContext.request.contextPath}/admin">Trang chủ</a></li>
+	                                    <li class="breadcrumb-item active" aria-current="page">Quản lý hóa đơn</li>
 	                                </ol>
 	                            </nav>
 	                        </div>
@@ -38,10 +38,10 @@
                                     <table id="zero_config" class="table table-bordered table-hover">
                                         <thead>
                                             <tr>
-                                                <th class="d1">Product's Id</th>
-                                                <th class="d1">Product's Name</th>
-                                                <th class="d1">Quantity</th>
-                                                <th class="d1">Price (VND)</th>
+                                                <th class="d1">Mã sản phẩm</th>
+                                                <th class="d1">Tên sản phẩm</th>
+                                                <th class="d1">Số lượng</th>
+                                                <th class="d1">Giá (VND)</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -70,7 +70,7 @@
 									<nav aria-label="...">
 									  <ul class="pagination">
 										<li class="page-item disabled">
-										  <p class="page-link">Total of money:  ${Integer.valueOf(objBill.total)} VND</p>
+										  <p class="page-link">Tổng tiền:  ${Integer.valueOf(objBill.total)} VND</p>
 										</li>
 									  </ul>
 									</nav>
